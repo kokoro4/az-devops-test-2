@@ -59,4 +59,4 @@ stages :
                 inputs:
                   provider: 'azurerm'
                   command: 'apply'
-                  environmentServiceNameAzureRM: 'z1p-sp-1''
+                  environmentServiceNameAzureRM: 'z1p-sp-1'
