@@ -13,12 +13,12 @@ terraform {
     }
 }
 
-data "azurerm_client_config" "current" {}
+# data "azurerm_client_config" "current" {}
 
-resource "azurerm_resource_group" "tamopsrg" {
-  name     = "tamops-tf"
-  location = "westus2"
-}
+# resource "azurerm_resource_group" "tamopsrg" {
+#   name     = "tamops-tf"
+#   location = "westus2"
+# }
 
 # resource "azurerm_storage_account" "tamopssa" {
 #   name                     = "tamopssatf"
