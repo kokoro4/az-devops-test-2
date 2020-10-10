@@ -13,7 +13,7 @@ stages :
         inputs:
           provider: 'azurerm'
           command: 'init'
-          backendServiceArm: 'z1p-tf-svc-01'
+          backendServiceArm: 'z1p-sp-2'
           backendAzureRmResourceGroupName: 'tamopstf1'
           backendAzureRmStorageAccountName: 'tamopstf1'
           backendAzureRmContainerName: 'tfstatedevops'
@@ -42,7 +42,7 @@ stages :
                 inputs:
                   provider: 'azurerm'
                   command: 'init'
-                  backendServiceArm: 'z1p-tf-svc-01'
+                  backendServiceArm: 'z1p-sp-2'
                   backendAzureRmResourceGroupName: 'tamopstf1'
                   backendAzureRmStorageAccountName: 'tamopstf1'
                   backendAzureRmContainerName: 'tfstatedevops'
@@ -52,10 +52,10 @@ stages :
                 inputs:
                   provider: 'azurerm'
                   command: 'plan'
-                  environmentServiceNameAzureRM: 'z1p-tf-svc-01'
+                  environmentServiceNameAzureRM: 'z1p-sp-2'
               - task: TerraformTaskV1@0
                 displayName: 'apply'
                 inputs:
                   provider: 'azurerm'
                   command: 'apply'
-                  environmentServiceNameAzureRM: 'z1p-tf-svc-01'
+                  environmentServiceNameAzureRM: 'z1p-sp-2'
