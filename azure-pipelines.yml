@@ -14,10 +14,10 @@ stages :
         inputs:
           provider: 'azurerm'
           command: 'init'
-          backendServiceArm: 'tamopstf'
-          backendAzureRmResourceGroupName: 'tamopstf'
-          backendAzureRmStorageAccountName: 'tamopstf'
-          backendAzureRmContainerName: 'tfstatedevops'
+          backendServiceArm: 'z1p-sp-1'
+          backendAzureRmResourceGroupName: 'z1p-cont-1'
+          backendAzureRmStorageAccountName: 'azuswtfz1pstate01'
+          backendAzureRmContainerName: 'azdevopstest2'
           backendAzureRmKey: 'terraform.tfstate'
       - task: TerraformTaskV1@0
         displayName: 'validate'
@@ -53,10 +53,10 @@ stages :
                 inputs:
                   provider: 'azurerm'
                   command: 'plan'
-                  environmentServiceNameAzureRM: 'tamopstf'
+                  environmentServiceNameAzureRM: 'z1p-sp-1'
               - task: TerraformTaskV1@0
                 displayName: 'apply'
                 inputs:
                   provider: 'azurerm'
                   command: 'apply'
-                  environmentServiceNameAzureRM: 'tamopstf'
+                  environmentServiceNameAzureRM: 'z1p-sp-1''
